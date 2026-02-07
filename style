@@ -1,0 +1,68 @@
+/* --- Reset & Basics --- */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif; }
+body { background:#FCC93C; color:#3C2317; }
+
+/* --- Header --- */
+header { background:#FB991C; display:flex; justify-content:space-between; align-items:center; padding:15px 30px; position:sticky; top:0; z-index:100; }
+header nav ul { list-style:none; display:flex; gap:20px; }
+header nav ul li a { color:white; text-decoration:none; font-weight:bold; transition:0.3s; }
+header nav ul li a:hover { color:#FCC93C; }
+
+/* --- Logo --- */
+header .logo { font-size:1.8em; font-weight:bold; display:flex; align-items:center; gap:10px; cursor:pointer; }
+header .logo .logo-text {
+    color:#FB991C;
+    text-shadow:0 0 5px #FB991C,0 0 10px #FCC93C,0 0 15px #DE4A32;
+    animation: floatGlow 3s ease-in-out infinite;
+    display:inline-block;
+}
+header .logo:hover .logo-text { text-shadow:0 0 10px #FB991C,0 0 20px #FCC93C,0 0 30px #DE4A32; transform:scale(1.05); }
+
+@keyframes floatGlow {
+    0% { transform: translateY(0); text-shadow:0 0 5px #FB991C,0 0 10px #FCC93C,0 0 15px #DE4A32; }
+    50% { transform: translateY(-5px); text-shadow:0 0 8px #FB991C,0 0 15px #FCC93C,0 0 20px #DE4A32; }
+    100% { transform: translateY(0); text-shadow:0 0 5px #FB991C,0 0 10px #FCC93C,0 0 15px #DE4A32; }
+}
+
+/* --- Hero --- */
+.hero { background: linear-gradient(rgba(222,74,50,0.6), rgba(59,35,23,0.3)), url('https://via.placeholder.com/1200x500.png?text=Stonybrook+Tails') no-repeat center/cover; color:#FCC93C; text-align:center; padding:120px 20px; position:relative; overflow:hidden; }
+.hero h1 { font-size:3em; margin-bottom:20px; color:#FB991C; animation: fadeInDown 1s ease; text-shadow:2px 2px 4px rgba(60,35,23,0.5); }
+.hero p { font-size:1.3em; margin-bottom:30px; animation: fadeInUp 1s ease; text-shadow:1px 1px 3px rgba(60,35,23,0.3); }
+.hero .btn { background:#FB991C; color:#3C2317; padding:15px 30px; border-radius:50px; font-weight:bold; font-size:1.1em; transition:all 0.3s ease; }
+.hero .btn:hover { background:#DE4A32; color:#FCC93C; transform:scale(1.05); }
+
+/* Floating Paws */
+.floating-paws { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; overflow:hidden; }
+.floating-paws span { position:absolute; font-size:1.5em; color:#FB991C; opacity:0.8; animation: floatPaw 10s linear infinite; }
+@keyframes floatPaw {
+    0% { transform:translateX(0) translateY(100%); opacity:0; }
+    10% { opacity:1; }
+    50% { opacity:0.8; }
+    90% { opacity:0.5; }
+    100% { transform:translateX(100vw) translateY(-20%); opacity:0; }
+}
+
+/* --- Products --- */
+.products { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; padding:50px 20px; }
+.product-card { background:#FCC93C; border-radius:20px; overflow:hidden; width:260px; box-shadow:0 8px 20px rgba(60,35,23,0.2); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s, background 0.3s; }
+.product-card:hover { transform:translateY(-10px) scale(1.02); box-shadow:0 15px 25px rgba(60,35,23,0.3); background:#FB991C; }
+.product-card h3 { padding:15px; color:#3C2317; font-weight:bold; }
+.product-card p { padding:0 15px; color:#DE4A32; font-weight:bold; }
+.product-card button { margin:15px; width:calc(100%-30px); padding:12px; border:none; border-radius:50px; background:#FB991C; color:#3C2317; font-weight:bold; cursor:pointer; transition:all 0.3s ease; }
+.product-card button:hover { background:#DE4A32; color:#FCC93C; transform:scale(1.05); }
+
+/* --- Cart Sidebar --- */
+.cart-sidebar { background:#3C2317; color:#FCC93C; padding:30px; position:fixed; right:-300px; top:0; width:300px; height:100%; transition:right 0.4s; }
+.cart-sidebar ul li input { border:1px solid #FCC93C; color:#3C2317; }
+.cart-sidebar button.btn { background:#FB991C; color:#3C2317; }
+.cart-sidebar button.btn:hover { background:#DE4A32; color:#FCC93C; transform:scale(1.05); }
+
+/* --- Footer --- */
+footer { background:#3C2317; color:#FCC93C; text-align:center; padding:20px; }
+
+/* --- Animations --- */
+@keyframes fadeInDown { 0% { opacity:0; transform:translateY(-20px); } 100% { opacity:1; transform:translateY(0); } }
+@keyframes fadeInUp { 0% { opacity:0; transform:translateY(20px); } 100% { opacity:1; transform:translateY(0); } }
+
+/* --- Responsive --- */
+@media (max-width:768px){ .products{flex-direction:column; align-items:center;} header nav ul{flex-direction:column; gap:10px;} }

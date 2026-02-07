@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stonybrook Tails Pet Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        🐾 <span class="logo-text">Stonybrook Tails</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Make Your Pets Happy!</h1>
+    <p>Shop premium products for furry, feathered, and scaly friends 🐶🐱🐰</p>
+    <button class="btn">Shop Now</button>
+    
+    <div class="floating-paws">
+        <span>🐾</span>
+        <span>🐾</span>
+        <span>🐾</span>
+        <span>🐾</span>
+        <span>🐾</span>
+    </div>
+</section>
+
+<section id="shop" class="products">
+    <div class="product-card">
+        <img src="https://via.placeholder.com/260x200.png?text=Dog+Food" alt="Dog Food">
+        <h3>Premium Dog Food</h3>
+        <p>$29.99</p>
+        <button class="btn">Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <img src="https://via.placeholder.com/260x200.png?text=Cat+Toys" alt="Cat Toys">
+        <h3>Fun Cat Toys</h3>
+        <p>$12.99</p>
+        <button class="btn">Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <img src="https://via.placeholder.com/260x200.png?text=Pet+Bed" alt="Pet Bed">
+        <h3>Cozy Pet Bed</h3>
+        <p>$49.99</p>
+        <button class="btn">Add to Cart</button>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Stonybrook Tails</h2>
+    <p>We provide high-quality pet products to make your furry friends happy and healthy.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@stonybrooktails.com</p>
+    <p>Phone: (555) 123-4567</p>
+</section>
+
+<div class="cart-sidebar">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button class="btn">Checkout</button>
+</div>
+
+<footer>
+    <p>© 2026 Stonybrook Tails | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
